@@ -15,6 +15,7 @@ steps:
 
 - task: CmdLine@1
   inputs:
-    script: eslint sorcecode/**/*.js -f html -o ./REPORT.html
+    script: eslint -f html -o ./REPORT.html
+    filename: 'sorcecode/**/*.js'
     displayName: 'ESLint test'
 
