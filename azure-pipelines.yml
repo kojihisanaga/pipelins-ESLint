@@ -13,6 +13,6 @@ steps:
 - script: npm install -g eslint
   displayName: 'ESLint install'
 
-- script: eslint --format html sorcecode/**/*.js
+- script: eslint sorcecode/**/*.js
   displayName: 'ESLint test'
 
