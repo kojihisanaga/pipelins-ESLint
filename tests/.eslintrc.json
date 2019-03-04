@@ -1,8 +1,14 @@
 {
-    "extends": ["eslint:recommended"],
+    "extends": [
+        "eslint:recommended"
+    ],
     "plugins": [],
     "parserOptions": {},
-    "env": {"browser": true},
+    "env": {
+        "browser": true
+    },
     "globals": {},
-    "rules": {}
+    "rules": {
+        "semi": "error"
+    }
 }
