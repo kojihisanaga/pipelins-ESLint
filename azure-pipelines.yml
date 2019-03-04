@@ -11,6 +11,6 @@ steps:
 - script: npm install -g eslint
   displayName: 'ESLint install'
 
-- script: eslint tests/**/*.js
+- script: eslint sorcecode/**/*.js
   displayName: 'ESLint test'
 
