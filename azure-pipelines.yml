@@ -2,15 +2,17 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript?view=vsts
 pool:
   vmImage: 'Ubuntu 16.04'
-  
+
+#---Node.js---
 steps:
 - task: NodeTool@0
   inputs:
     versionSpec: '8.x'
-  
+
+#---ESLint---
 - script: npm install -g eslint
   displayName: 'ESLint install'
 
-- script: eslint sorcecode/**/*.js
+- script: eslint --format html sorcecode/**/*.js
   displayName: 'ESLint test'
 
