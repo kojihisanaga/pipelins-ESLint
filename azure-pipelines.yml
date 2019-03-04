@@ -13,11 +13,7 @@ steps:
 - script: npm install -g eslint
   displayName: 'ESLint install'
 
-- script: eslint sorcecode/**/*.js -f jslint-xml -o ./TEST-RESULTS.xml
+- script: eslint sorcecode/**/*.js -f html -o ./REPORT.html
   displayName: 'ESLint test'
 
-- task: PublishTestResults@2
-  inputs:
-    testResultsFiles: '**/TEST-RESULTS.xml'
-    testRunTitle: 'Test results for JavaScript'
-  condition: succeededOrFailed()
+- task: PublishBuildArtifacts
